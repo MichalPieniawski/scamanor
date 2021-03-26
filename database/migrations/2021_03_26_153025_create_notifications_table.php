@@ -15,7 +15,15 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('id_sender');
+            $table->unsignedBigInteger('id_receiver');
+            $table->date('send_date');
+            $table->text('content');
+            $table->unsignedBigInteger('id_offer_attachment');
+            $table->foreign('id_sender')->references('id')->on('users');
+            $table->foreign('id_receiver')->references('id')->on('users');
+            $table->foreign('id_offer_attachment')->references('id')->on('offers');
+
         });
     }
 

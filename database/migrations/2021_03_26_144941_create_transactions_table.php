@@ -15,7 +15,15 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('id_proposed_offer');
+            $table->unsignedBigInteger('id_target_offer');
+            $table->boolean('confirmation');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->boolean('status');
+            $table->foreign('id_proposed_offer')->references('id')->on('offers');
+            $table->foreign('id_target_offer')->references('id')->on('offers');
+
         });
     }
 

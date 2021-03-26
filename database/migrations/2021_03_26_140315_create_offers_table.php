@@ -15,7 +15,12 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('id_user');
+            $table->text('itemTitle');
+            $table->text('descripton');
+            $table->float('price');
+            $table->boolean('status');
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 
