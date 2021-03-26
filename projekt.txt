@@ -1,0 +1,26 @@
+SCAMANOR
+
+Wymiany pomiedzy uzytkownikami.
+
+Zrobione:
+-repozytorum
+-logowanie/rejestracja
+-daza banych:
+	urzytkownik
+	
+
+Do zrobienia:
+-daza banych:
+	-oferty
+	-zdjęcia
+	-tranzakcje/wymiany
+	-powidomienia
+	
+-formularz dodanie oferty
+-wprowadzanie zmian oferty
+-wgrać 
+-priv
+-powiadomienia (ala skrzynka pocztowa)
+-spis ofert
+-historia wymian
+-panel admina
