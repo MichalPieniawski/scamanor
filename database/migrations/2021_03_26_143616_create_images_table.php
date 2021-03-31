@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_offer');
             $table->longtext('img_code');
-            $table->integer('position');
+            $table->int('position');
             $table->foreign('id_offer')->references('id')->on('offers');
         });
     }
