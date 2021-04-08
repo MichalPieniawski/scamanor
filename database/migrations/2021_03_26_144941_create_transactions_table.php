@@ -20,7 +20,7 @@ class CreateTransactionsTable extends Migration
             $table->boolean('confirmation');
             $table->date('start_date');
             $table->date('end_date');
-            $table->boolean('status');
+            $table->boolean('status')->nullable();
             $table->foreign('id_proposed_offer')->references('id')->on('offers');
             $table->foreign('id_target_offer')->references('id')->on('offers');
 
