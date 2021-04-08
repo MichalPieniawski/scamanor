@@ -27,3 +27,4 @@ Do zrobienia:
 
 
 8.04 - Dodano podstrony, routy, poprawiono wygląd.
+	 - Dodano Controllery podstron
