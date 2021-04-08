@@ -19,7 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+/* lista route'ów na podstrony */
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('/list', 'App\Http\Controllers\HomeController@index')->name('list');
+Route::get('/offer', 'App\Http\Controllers\HomeController@index')->name('offer');
+Route::get('/statuslist', 'App\Http\Controllers\HomeController@index')->name('statuslist');
+Route::get('/archive', 'App\Http\Controllers\HomeController@index')->name('archive');
 
 
 

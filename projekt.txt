@@ -24,3 +24,6 @@ Do zrobienia:
 -spis ofert
 -historia wymian
 -panel admina
+
+
+8.04 - Dodano podstrony, routy, poprawiono wygląd.

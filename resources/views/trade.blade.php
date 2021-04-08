@@ -1,12 +1,6 @@
 @extends('layouts.admin')
 
 @section('content')
-
-
-<style>
-.space { margin:0; padding:0; height:50px; } /* free space */
-</style>
-
 <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -31,7 +25,6 @@
   <div class="row justify-content-center">
   <h4>Użyj poniższych opcji, aby przenieść się na odpowiednią stronę </h4>
   </div>
-  <br> </br>
     <!-- Main content -->
     <section class="content"> 
      
@@ -104,72 +97,9 @@
             </div>
           </div>
                
-          <script>
-$(document).ready(function() {
-    var t = $('#later').DataTable( {
-        "columnDefs": [ {
-            "searchable": false,
-            "orderable": false,
-            "targets": 0
-        } ],
-        "lengthMenu": [[-1, 10, 25, 50], ["All", 10, 25, 50]],
-        "order": [[ 1, 'asc' ]]
-    } );
-    
-    t.on( 'order.dt search.dt', function () {
-        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-            cell.innerHTML = i+1;
-        } );
-    } ).draw();
-} );
-</script> 
 
-<br> </br>
-<br> </br>
-<br> </br>
-<br> </br>
-<br> </br>
-<div class="container">
-            
-            <div class="column">    
-<div class="col-xs-1" align="center">
+              
 
-  <h2><p class="text-primary"> Sprawdź oferty wymiany, które są promowane!  </p></h2>
-  </div>
-  <p class="text-info">*Poniżej znajduję się tabela z ofertami  <b>PROMOWANYMI</b>. </p>
-  
-
-
-  
-<table class="table table-striped table-bordered text-center table-hover table-responsive-lg" id="later">
-     <thead>
-      <tr >
-
-      <th scope="col">LP</th>
-        <th>Zdjęcie</th>
-        <th>Data</th>
-        <th>Treść</th>
-        <th>Autor</th>
-        <th>Miejsce</th>
-        <th>Status</th>
-        
-      </tr>
-   </thead>
-    
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        
-      </tr>
-   
-      </tbody>
-    </table>
-            
            
            
 
