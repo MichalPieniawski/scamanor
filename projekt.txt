@@ -28,3 +28,4 @@ Do zrobienia:
 
 8.04 - Dodano podstrony, routy, poprawiono wygląd.
 	 - Dodano Controllery podstron
+	- Dodano możliwość wprowadzania nowych gier  (bez zdjęć)

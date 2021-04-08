@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class offer extends Model
 {
     use HasFactory;
+    public $timestamps=false;
+    protected $primaryKey ='id';
+    protected $table="offers";
 }

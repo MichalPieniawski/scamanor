@@ -28,6 +28,9 @@ Route::get('/statuslist', 'App\Http\Controllers\StatusListController@index')->na
 Route::get('/archive', 'App\Http\Controllers\ArchiveController@index')->name('archive');
 
 
+/* route dodania oferty */
+Route::post('/offersubmit','App\Http\Controllers\OfferController@save');
+
 
 
 

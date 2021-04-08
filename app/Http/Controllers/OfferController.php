@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\offer;
 use Illuminate\Http\Request;
 
 class OfferController extends Controller
@@ -24,5 +24,19 @@ class OfferController extends Controller
     public function index()
     {
         return view('offer');
+    }
+
+    function save(Request $req)
+    {
+	$this->validate($req, [
+	    'itemTitle'=>'required',
+	    'descripton'=>'required',
+	]);
+	$offer= new offer;
+	$offer->itemTitle=$req->itemTitle;
+	$offer->descripton=$req->descripton;
+	$offer->id_user=$req->id_user;
+	$offer->save();
+	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');
     }
 }
