@@ -37,24 +37,29 @@
 
 <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 </head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
+
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+<div class="wrapper" class="toggled">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+  <nav class="main-header navbar-expand navbar navbar-dark bg-dark elevation-4">
     <!-- Left navbar links -->
 	
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
-      <h3><a class="btn btn-light btn-lg" href='home'> Strona główna </a></h3>
-      </li>
-      
-      <li class="nav-item d-none d-sm-inline-block">
-        
-      </li>
-    </ul>
+      <div class="d-grid gap-2 d-md-block">
+  <a class="btn btn-primary " href='home' role="button"><h6> <i class="fa fa-home"></i> Strona główna</h6> </a>
+  <a class="btn btn-info " href='list' role="button"><h6> <i class="fa fa-list"></i> Lista Ofert</h6> </a>
+  <a class="btn btn-success"  href='offer' role="button"><h6> <i class="fa fa-plus-circle"></i> Utwórz ofertę </h6></a>
+  <a class="btn btn-warning " href='statuslist' role="button"><h6><i class="fa fa-handshake-o"></i> Status wymian</h6></a>
+  <a class="btn btn-danger " href='archive' role="button"><h6><i class="fa fa-gavel"></i> Archiwum </h6></a>
+
+  
+</div>
+
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
@@ -66,19 +71,11 @@
       </div>
     </form>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Messages Dropdown Menu -->
-     
-            <!-- Message End -->
-      
-            
+   
          
       <!-- Notifications Dropdown Menu -->
     
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="false" href="#"><i
-            class="fa fa-th-large"></i></a>
       </li>
     </ul>
   </nav>
@@ -100,7 +97,7 @@
       <img src="./img/profile.png" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-      <a href='#' class="d-block">
+      <a href='profile' class="d-block">
         
       {{Auth::user()->name }}
       </a>
@@ -131,41 +128,41 @@
             
           <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="" class="nav-link ">
+            <a href="list" class="nav-link ">
             
               <i class="fa fa-cash-register nav-icon"></i>
               <p>
-                12
+                Lista Ofert
               </p>
             </a>
             
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link ">
+            <a href="offer" class="nav-link ">
             
               <i class="nav-icon fa fa-cash-register"></i>
               <p>
-                13
+                Utwórz ofertę
               </p>
             </a>
             
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link ">
+            <a href="statuslist" class="nav-link ">
             
               <i class="nav-icon fa fa-cash-register"></i>
               <p>
-                14
+                Status wymian
               </p>
             </a>
             
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link ">
+            <a href="archive" class="nav-link ">
             
               <i class="nav-icon fa fa-cash-register"></i>
               <p>
-                15
+                Archiwum
               </p>
             </a>
             

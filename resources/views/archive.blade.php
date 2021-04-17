@@ -1,6 +1,41 @@
 @extends('layouts.admin')
 
 @section('content')
+<script>
+$(document).ready(function() {
+    var t = $('#example').DataTable( {
+        "columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0,
+            "render": function(data, type, row) {return '<button class="btn btn-primary" data-toggle="modal" data-id="'+row.id+'" data-fieldname="'+row.fieldname+'" data-target="#myModal">'+data+'</button>'} 
+        } ],
+        "lengthMenu": [[-1, 10, 25, 50], ["All", 10, 25, 50, ]],
+        "order": [[ 1, 'asc' ]],
+        
+    } );
+ 
+    t.on( 'order.dt search.dt', function () {
+        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        } );
+    } ).draw();
+    
+    /* -> OnClick event, gdyby był potrzebny z wykorzystaniem MODALU.
+    t.on('click', 'td', function () {
+      
+        var tresc =$(this).closest('tr').find('td:eq(2)').html();
+        var id =$(this).closest('tr').find('td:eq(8)').html();
+      $('#addNote').attr('action', '/addNote')
+       window.$('#modal-id').modal("show");
+       $(".ptresc").html("src","");
+       $(".ptresc").html("<b> 1. Treść wpisu:     </b>"+tresc);
+       $(".pid").html("src","");
+       $(".pid").html("<b> 3. ID wpisu:     </b>"+id);
+    });
+    */
+} );
+</script>
 <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -27,72 +62,41 @@
   <div class="container">
  
 </div>
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-            <a href="list">
-              <div class="inner">
-                <h3>Lista Ogłoszeń  </h3>
-                <p> Zawiera wszystkie ogłoszenia </p>
-              </div>
-              <div class="icon">
-              </div>
-              <a href="list" class="small-box-footer">Kliknij, aby przeglądać listę ogłoszeń <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
+       
+<div class="container">
+<form class="center" >
+  <div class="form-group mb-2" align="center">
+    <h1><i class="fa fa-archive"> </i> <b> Archiwalne- wykonane wpisy </b></h1>
+    <p> Tabela zawiera wpisy uznane za zakończone. </p>
+  </div>
+</form>
+<table id="example" class="table table-striped table-bordered text-center table-hover table-responsive-lg">
+        <thead>
+            <tr >
+                <th>LP</th>
+                <th>Data</th>
+                <th>Zdjęcie</th>
+                <th>Treść</th>
+                <th>Autor</th>
+                <th>Zakończył</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+  
+   </div>  
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      </table>
 
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-            <a href="offer">
-              <div class="inner">
-                <h3>Utwórz ofertę wymiany!<sup style="font-size: 20px"></sup></h3>
-                <p>Kliknij, aby utworzyć swoją ofertę wymiany.<p>
-              </div>
-              <div class="icon">
-                
-              </div>
-              <a href="offer" class="small-box-footer">Kliknij, aby dodać własną ofertę wymiany<i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-            <a href="statuslist">
-              <div class="inner">
-                <h3>Status wymiany</h3>
-
-                <p>Sprawdź, czy zmienił się status Twoich wymian</p>
-              </div>
-              <div class="icon">
-         
-              </div>
-              <a href="statuslist" class="small-box-footer">Kliknij, aby sprawdziś status wymian<i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-         <!-- ./col -->
-         <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-            <a href="archive">
-              <div class="inner">
-                <h3>Historia wymian</h3>
-
-                <p>Zajrzyj do archiwum dokonanych przez Ciebie wymian. </p>
-              </div>
-              <div class="icon">
-              
-              </div>
-              <a href="archive" class="small-box-footer">Kliknij, aby przejść do podstrony...<i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-               
-
-              
+</div>
 
            
            

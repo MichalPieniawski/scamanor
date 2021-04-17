@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Auth::routes();
@@ -32,6 +32,7 @@ Route::get('/archive', 'App\Http\Controllers\ArchiveController@index')->name('ar
 Route::post('/offersubmit','App\Http\Controllers\OfferController@save');
 
 
-
-
+/* route profilu + zmiana hasła */
+Route::get('/profile', 'App\Http\Controllers\ProfileController@index');
+Route::post('/changepassd', 'App\Http\Controllers\ProfileController@store');
 
