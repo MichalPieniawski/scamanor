@@ -11,4 +11,9 @@ class offer extends Model
     public $timestamps=false;
     protected $primaryKey ='id';
     protected $table="offers";
+
+    public function image()
+    {
+        return $this->hasOne('App\Models\images');
+    }
 }

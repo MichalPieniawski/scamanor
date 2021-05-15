@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\offer;
+use App\Models\images;
 use Illuminate\Http\Request;
+use DB;
 
 class ListController extends Controller
 {
@@ -23,6 +25,11 @@ class ListController extends Controller
      */
     public function index()
     {
-        return view('list');
+        $offers = DB::table('offers')
+        ->join('images', 'offers.id', '=', 'id_offer')
+        ->select('offers.*', 'img_code')
+        ->get();
+        return view('list', ['oferty' => $offers]);
     }
+
 }

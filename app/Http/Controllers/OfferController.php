@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\offer;
+use App\Models\images;
 use Illuminate\Http\Request;
+use DB;
 
 class OfferController extends Controller
 {
@@ -31,12 +33,18 @@ class OfferController extends Controller
 	$this->validate($req, [
 	    'itemTitle'=>'required',
 	    'descripton'=>'required',
+        'photo'=> 'required|max:2048',
 	]);
 	$offer= new offer;
 	$offer->itemTitle=$req->itemTitle;
 	$offer->descripton=$req->descripton;
 	$offer->id_user=$req->id_user;
-	$offer->save();
+    $offer->save();
+
+    $images=new images;
+    $images->img_code= base64_encode(request('photo'));
+    $images->id_offer=$offer->id;
+    $images->save();
 	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');
     }
 }

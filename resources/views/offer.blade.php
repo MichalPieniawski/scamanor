@@ -52,6 +52,17 @@
         </div>
     </div>
 @endif
+
+@if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <strong>WOOPSI!</strong> Wygląda na to, że coś poszło nie tak. Oferta nie została utworzona.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
     
 
    <div class="container">
@@ -79,22 +90,18 @@
                     <input type="text" class="form-control" id="descripton" placeholder="Opisz swoją grę..." name="descripton">
                 </div>
                 
-               <!--  divek na zdjęcie !!!!
-                   
-                   <div class="form-group">
-                    <label for="place">Zdjęcie Gry (Opcjonalne):</label>
-                popraw, tu nie wiem czy input czy kto wie co ->    <input type="text" class="form-control" id="place" placeholder="Wpisz miejsce zdarzenia..." name="place">
-                </div>
-               
-                -->
-
                 <div class="form-group">
-                   
-                    <input type="hidden" id="id_user" name="id_user" value="{{Auth::user()->id }}">
-                    
-    </div>
+                <div class="form-inline">
+                <label for="photo">Dodaj zdjęcie gry:</label>
+                    <input type="file" class="form-control-file" name="photo" id="photo" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">Dodaj zdjęcie do swojej oferty wymiany. Rozmiar zdjęcia nie może przekraczać 2MB.</small>
+                    </div>
+                </div>
+    
+
+                <div class="form-group"> <input type="hidden" id="id_user" name="id_user" value="{{Auth::user()->id }}">  </div>
              
-                <button type="submit" class="btn btn-default">Dodaj wpis</button>
+                <button type="submit" class="btn btn-success"  > <i class="fa fa-plus-circle"></i>  Dodaj wpis</button>
                 <!-- End input fields -->
                 </form>
                 </div>
