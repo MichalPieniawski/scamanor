@@ -42,7 +42,10 @@ class OfferController extends Controller
     $offer->save();
 
     $images=new images;
-    $images->img_code= base64_encode(request('photo'));
+    $zdj = $req->photo->path();
+    $imageData= base64_encode(file_get_contents($zdj));
+    $src='data:'.mime_content_type($zdj).';base64,'.$imageData;
+    $images->img_code=$src;
     $images->id_offer=$offer->id;
     $images->save();
 	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');

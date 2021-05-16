@@ -56,7 +56,7 @@
 </div>
       
                
-          <<script>
+          <script>
 $(document).ready(function() {
     var t = $('#later').DataTable( {
       "language":{
@@ -277,11 +277,9 @@ $(document).ready(function() {
       <tr>
 
       <th scope="col">LP</th>
-        <th>Data</th>
         <th>Zdjęcie</th>
         <th>Tytuł gry</th>
         <th>Autor</th>
-        <th>Miejsce</th>
       </tr>
    </thead>
     

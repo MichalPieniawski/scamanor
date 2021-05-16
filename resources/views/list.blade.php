@@ -271,7 +271,7 @@ $(document).ready(function() {
    </div>  
       <tr>
         <td></td>
-        <td>{{$row -> img_code}}</td>
+        <td><img src="{{$row -> img_code}}"></td>
         <td class="cell-breakWord">{{$row -> itemTitle }}</td>
  
       </tr>

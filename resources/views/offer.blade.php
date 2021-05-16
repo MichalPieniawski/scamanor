@@ -69,14 +69,9 @@
     <div class="row justify-content-center align-items-center">
         <div class="col-10 col-md-8 col-lg-6">
             <!-- Form -->
-            @if(count($errors)>0)
-           <ul>
-      @foreach($errors->all() as $error)
-    <li class="alert alert-danger">{{$error}}</li>
-    @endforeach
     </ul>
-    @endif
-            <form class="form-example" action="/offersubmit" method="POST">
+
+            <form class="multipart/form-data" action="/offersubmit" method="POST" accept-charset="utf-8">
             @csrf
                 <h1>Tworzenie nowej oferty wymiany</h1>
                 <p class="description">Utwórz nową ofertę wymiany, uzupełniając formularz.</p>
@@ -92,8 +87,8 @@
                 
                 <div class="form-group">
                 <div class="form-inline">
-                <label for="photo">Dodaj zdjęcie gry:</label>
-                    <input type="file" class="form-control-file" name="photo" id="photo" aria-describedby="fileHelp">
+                <label for="photo">Dodaj zdjęcie gry:  </label>
+                    <input type="file"  name="photo" id="photo" accept="image.png, image/jpeg" aria-describedby="fileHelp">
                     <small id="fileHelp" class="form-text text-muted">Dodaj zdjęcie do swojej oferty wymiany. Rozmiar zdjęcia nie może przekraczać 2MB.</small>
                     </div>
                 </div>
