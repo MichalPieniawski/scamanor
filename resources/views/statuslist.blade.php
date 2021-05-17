@@ -1,7 +1,5 @@
 @extends('layouts.admin')
-<head>
-<link rel = "icon" href = "./img/Smoczur.jpg"  type = "image/x-icon">
-</head>
+
 
 @section('content')
 <!-- Content Header (Page header) -->

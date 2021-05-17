@@ -29,14 +29,10 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
- <div class="row justify-content-center">
-    <h1> miejsce na logo chyba bo czemu nie!</h1>
-   
-  </div>
         <div class="maincategories">
         <div class="wrapper">
         <div class="row justify-content-center">
-        <header> <h1> <b>Scamanor - Twoje miejsce do wymiany grami! </b> </h1>
+        <header> <h1> <b><img src="./img/smoktrans.png" width="75" height="75" >Scamanor - Twoje miejsce do wymiany grami! </b> </h1>
         
         </header>
         </div>
@@ -288,8 +284,8 @@ $(document).ready(function() {
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
+  
+     
 
       </tr>
    

@@ -244,11 +244,22 @@ $(document).ready(function() {
       
 
   <div class="maincategories">
-  <div class="form-group mb-2" align="center">
+  
 
-    <h1><img src="./img/Smoczur.jpg" width="50" height="50" > <i class="fa fa-list"></i>  <b>Wszystkie oferty wymiany  </b></h1>
+  <table >
+  <thead>
+<td style="height:75px;width:200x">
+</td>
+  <td style="height:75px;width:650px">
+  <h4><b><img src="./img/smoktrans.png" width="78" height="75" > Scamanor </b></h4>
+  </td>
+ 
+  <td>
+   <h1><i class="fa fa-list"></i>  <b>Wszystkie oferty wymiany  </b></h1>
      Lista wszystkich ofert w systemie. 
-  </div>
+  </td>
+  </thead>
+  </table>
   </div>
 
   <br> </br>
