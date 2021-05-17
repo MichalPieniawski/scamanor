@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+<head>
+<link rel = "icon" href = "./img/Smoczur.jpg"  type = "image/x-icon">
+</head>
+
 @section('content')
 <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -71,7 +75,7 @@
             <!-- Form -->
     </ul>
 
-            <form class="multipart/form-data" action="/offersubmit" method="POST" accept-charset="utf-8">
+            <form enctype="multipart/form-data" action="/offersubmit" method="POST" accept-charset="utf-8">
             @csrf
                 <h1>Tworzenie nowej oferty wymiany</h1>
                 <p class="description">Utwórz nową ofertę wymiany, uzupełniając formularz.</p>

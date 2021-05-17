@@ -245,7 +245,8 @@ $(document).ready(function() {
 
   <div class="maincategories">
   <div class="form-group mb-2" align="center">
-    <h1><i class="fa fa-list"></i> <b>Wszystkie oferty wymiany  </b></h1>
+
+    <h1><img src="./img/Smoczur.jpg" width="50" height="50" > <i class="fa fa-list"></i>  <b>Wszystkie oferty wymiany  </b></h1>
      Lista wszystkich ofert w systemie. 
   </div>
   </div>
@@ -270,9 +271,9 @@ $(document).ready(function() {
  @foreach($oferty as $row)
    </div>  
       <tr>
-        <td></td>
-        <td><img src="{{$row -> img_code}}"></td>
-        <td class="cell-breakWord">{{$row -> itemTitle }}</td>
+        <td style="height:50px;width:50px"></td>
+        <td style="height:180px;width:180px"><img src="data:image/jpeg;base64,{{$row -> img_code}}" width="150" height="175" alt="obrazekgry"></td>
+        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><h5><b>{{$row -> itemTitle }}</b></h5></td>
  
       </tr>
   @endforeach

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\offer;
 use App\Models\images;
 use Illuminate\Http\Request;
+
 use DB;
 
 class OfferController extends Controller
@@ -33,7 +34,7 @@ class OfferController extends Controller
 	$this->validate($req, [
 	    'itemTitle'=>'required',
 	    'descripton'=>'required',
-        'photo'=> 'required|max:2048',
+        'photo'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 	]);
 	$offer= new offer;
 	$offer->itemTitle=$req->itemTitle;
@@ -42,10 +43,7 @@ class OfferController extends Controller
     $offer->save();
 
     $images=new images;
-    $zdj = $req->photo->path();
-    $imageData= base64_encode(file_get_contents($zdj));
-    $src='data:'.mime_content_type($zdj).';base64,'.$imageData;
-    $images->img_code=$src;
+    $images->img_code = base64_encode(file_get_contents($req->file('photo'))); 
     $images->id_offer=$offer->id;
     $images->save();
 	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');
