@@ -85,7 +85,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="home" class="brand-link">
-    {!! "&nbsp;" !!} {!! "&nbsp;" !!}  <i class="nav-icon fa fa-calculator"></i>
+    {!! "&nbsp;" !!} {!! "&nbsp;" !!}  <img src="./img/smoktrans.png" width="25px" height="25px"></i>
       <span class="brand-text font-weight-light">Panel Scamanor</span>
     </a>
 

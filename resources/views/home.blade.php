@@ -54,7 +54,7 @@
                
           <script>
 $(document).ready(function() {
-    var t = $('#later').DataTable( {
+    var t = $('#promo').DataTable( {
       "language":{
     "processing": "Przetwarzanie...",
     "search": "Znajdź:",
@@ -267,29 +267,29 @@ $(document).ready(function() {
   </div>
 </div>
 
-  
-<table class="table table-striped table-bordered text-center table-hover table-responsive-lg" id="later">
+<div class="container">
+
+<form class="center" >
+<table class="table table-striped table-bordered text-center table-hover table-responsive-lg" id="promo"> 
      <thead>
       <tr>
-
-      <th scope="col">LP</th>
-        <th>Zdjęcie</th>
-        <th>Tytuł gry</th>
-        <th>Autor</th>
-      </tr>
-   </thead>
-    
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-  
+      <th>LP</th>
+      <th>Zdjęcie</th>
+      <th>Treść</th>
      
-
       </tr>
-   
-      </tbody>
+      </thead>
+ <tbody>
+ 
+ @foreach($ofertyprom as $row)
+   </div>  
+      <tr>
+        <td style="height:50px;width:50px"></td>
+        <td style="height:180px;width:180px"><img src="data:image/jpeg;base64,{{$row -> img_code}}" width="150" height="175" alt="obrazekgry"></td>
+        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><h5><b>{{$row -> itemTitle }}</b></h5></td>
+ 
+      </tr>
+  @endforeach
     </table>
             
            

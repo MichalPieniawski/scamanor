@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $offers = DB::table('offers')
+        ->join('images', 'offers.id', '=', 'id_offer')
+        ->select('offers.*', 'img_code')
+        ->where('promoted', '=', '1')
+        ->get();
+        return view('home', ['ofertyprom' => $offers]);
     }
 }
