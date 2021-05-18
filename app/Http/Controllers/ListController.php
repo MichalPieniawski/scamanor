@@ -5,6 +5,8 @@ use App\Models\offer;
 use App\Models\images;
 use Illuminate\Http\Request;
 use DB;
+use Auth;
+
 
 class ListController extends Controller
 {
@@ -30,6 +32,16 @@ class ListController extends Controller
         ->select('offers.*', 'img_code')
         ->get();
         return view('list', ['oferty' => $offers]);
+    }
+    public function destroy($id)
+    {
+        $offer = offer::find($id);
+
+        $images = images::where('id_offer',$id)->firstOrFail();
+        $images->delete();
+        $offer->delete();
+
+        return redirect('/list')->with('success','Oferta została usunięta.');
     }
 
 }

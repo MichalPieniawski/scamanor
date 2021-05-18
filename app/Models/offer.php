@@ -16,4 +16,8 @@ class offer extends Model
     {
         return $this->hasOne('App\Models\images');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

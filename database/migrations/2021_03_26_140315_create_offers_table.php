@@ -17,7 +17,7 @@ class CreateOffersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user');
             $table->text('itemTitle');
-            $table->text('descripton');
+            $table->text('description');
             $table->boolean('status')->nullable();
             $table->foreign('id_user')->references('id')->on('users');
         });
