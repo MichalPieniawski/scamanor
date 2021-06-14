@@ -84,7 +84,7 @@
                 </div>
                 <div class="form-group">
                     <label for="tresc">Opisz swoją grę:</label>
-                    <input type="text" class="form-control" id="descripton" placeholder="Opisz swoją grę..." name="descripton">
+                    <input type="text" class="form-control" id="description" placeholder="Opisz swoją grę..." name="description">
                 </div>
                 
                 <div class="form-group">
