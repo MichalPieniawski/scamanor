@@ -291,7 +291,7 @@ $(document).ready(function() {
         @endif
         </td>
         <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
-        <button class="btn btn-secondary mb-2"><a target="_blank" href="{{ route('chatstart', $row->id_user, auth()->user()->id) }}">Chat</a></button>
+        <button class="btn btn-secondary mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
         </td>
       </tr>
   @endforeach
