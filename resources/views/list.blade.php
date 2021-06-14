@@ -269,7 +269,7 @@ $(document).ready(function() {
 
 <form class="center" >
 <table class="table table-striped table-bordered text-center table-hover table-responsive-lg" id="lista"> 
-     <thead>
+     <thead class="thead-dark">
       <tr>
       <th>LP</th>
       <th>Zdjęcie</th>
