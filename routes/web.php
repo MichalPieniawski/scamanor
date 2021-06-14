@@ -27,6 +27,7 @@ Route::get('/offer', 'App\Http\Controllers\OfferController@index')->name('offer'
 Route::get('/statuslist', 'App\Http\Controllers\StatusListController@index')->name('statuslist');
 Route::get('/archive', 'App\Http\Controllers\ArchiveController@index')->name('archive');
 Route::get('info/{id}','App\Http\Controllers\InfoController@appearData')->name('info/{id}');
+Route::get('/chat', 'App\Http\Controllers\ChatController@index')->name('chat');
 
 /* route dodania oferty */
 Route::post('/offersubmit','App\Http\Controllers\OfferController@save');
@@ -38,4 +39,8 @@ Route::get('/profile', 'App\Http\Controllers\ProfileController@index');
 Route::post('/changepassd', 'App\Http\Controllers\ProfileController@store');
 
 Route::get('/list/{id}','App\Http\Controllers\ListController@destroy')->name('destroyoffer')->middleware(['auth', 'admin']);
-    
+Route::get('/list/{id}','App\Http\Controllers\ListController@chatstart')->name('chatstart');
+
+Route::get('/contacts', 'App\Http\Controllers\ContactsController@get');
+Route::get('/conversation/{id}', 'App\Http\Controllers\ContactsController@getMessagesFor');
+Route::post('/conversation/send', 'App\Http\Controllers\ContactsController@send');

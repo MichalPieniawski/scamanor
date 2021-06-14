@@ -43,5 +43,12 @@ class ListController extends Controller
 
         return redirect('/list')->with('success','Oferta została usunięta.');
     }
+    public function chatstart($id_user, $id)
+    {
+
+        $user = DB::table('contacts')->insert(['users_list' => $id, 'user_contact' => $id_user]);
+
+        return redirect('/chat');
+    }
 
 }

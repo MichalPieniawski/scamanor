@@ -52,9 +52,9 @@
 </div>
       
                
-          <script>
+<script type="text/javascript">
 $(document).ready(function() {
-    var t = $('#promo').DataTable( {
+    $('#promo').DataTable( {
       "language":{
     "processing": "Przetwarzanie...",
     "search": "Znajdź:",
@@ -308,4 +308,6 @@ $(document).ready(function() {
     </section>
     <!-- /.
     content -->
+ 
+</div>
 @endsection

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Laravel Project</title>
+	<script src="{{ asset('js/app.js') }}" defer></script>
+
 </head>
 <body>
 	<div class="header">This is header</div>

@@ -33,12 +33,12 @@ class OfferController extends Controller
     {
 	$this->validate($req, [
 	    'itemTitle'=>'required',
-	    'descripton'=>'required',
+	    'description'=>'required',
         'photo'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 	]);
 	$offer= new offer;
 	$offer->itemTitle=$req->itemTitle;
-	$offer->descripton=$req->descripton;
+	$offer->description=$req->description;
 	$offer->id_user=$req->id_user;
     $offer->save();
 
