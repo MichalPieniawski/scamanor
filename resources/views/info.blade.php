@@ -63,7 +63,7 @@
                 <!-- <b> 3.</b> zdjęcie:<b> <img src="data:image/jpeg;base64, {{$oferty['img_code']}}" width="150" height="175" alt="obrazekgry"> </b>  -->
      
             </p> 
-            <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
+            <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chooseuser', $oferty['id_user']) }}">Chat</a></button>
                 
                     <div>
                     </div>
