@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 <head>
-<link rel = "icon" href = "https://www.vhv.rs/dpng/d/539-5398503_transparent-dementor-png-silhouette-harry-potter-dementor-png.png"  type = "image/x-icon">
+<title>Scamanor</title>
+<link rel = "icon" href = "./img/smoktrans.png"  type = "image/x-icon">
 </head>
 
 
@@ -15,6 +16,12 @@
   word-break: break-word;
  }
  .container {overflow: auto;}
+ .card-text{
+    font-size:19px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 </style>
 
 <br>
@@ -41,13 +48,22 @@
            </div>
             <div class="card-body">
             <div class="form-group">
+            <p class="card-text">
                     <label for="tresc">Informacje:</label>
+                    </p>
                 </div>
-                <p class="card-text">  <b>1.</b> Oferta: <b>{{$oferty['itemTitle']}}</b>   &nbsp&nbsp&nbsp&nbsp   <b> 2.</b> Autor wpisu:<b> {{$oferty['autor']}} </b> &nbsp&nbsp&nbsp&nbsp  
-                <!-- <b> 3.</b> zdjęcie:<b> <img src="data:image/jpeg;base64, {{$oferty['img_code']}}" width="150" height="175" alt="obrazekgry"> </b> </p>  -->
+                <p class="card-text">
+                 <b>1.</b> Nazwa gry: <b>{{$oferty['itemTitle']}}</b>   
+                </p>
+                 <p class="card-text"> 
+                 <b> 2.</b> Autor wpisu:<b> {{$oferty['autor']}} </b> </p>
+                 <p class="card-text">
+                  <b>3. </b> Opis: <b> {{$oferty['description']}} </b>
+                  </p>
+                <!-- <b> 3.</b> zdjęcie:<b> <img src="data:image/jpeg;base64, {{$oferty['img_code']}}" width="150" height="175" alt="obrazekgry"> </b>  -->
      
-            
-                
+            </p> 
+            <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
                 
                     <div>
                     </div>

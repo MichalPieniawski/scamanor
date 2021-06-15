@@ -6,42 +6,24 @@
 <style>
 .space { margin:0; padding:0; height:50px; } /* free space */
 .maincategories {
-    background: #fff;
+    background: #222222;
     padding-top: 56px;
     padding-bottom: 61px;
 }
 </style>
 
 <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-        
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-          
-              
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+    
     <!-- /.content-header -->
         <div class="maincategories">
         <div class="wrapper">
-        <div class="row justify-content-center">
-        <header> <h1> <b><img src="./img/smoktrans.png" width="75" height="75" >Scamanor - Twoje miejsce do wymiany grami! </b> </h1>
+        <div class="row justify-content-center text-white">
+        <header> <h1> <b><img src="./img/smoktrans.png" width="75" height="75">  Scamanor - Twoje miejsce do wymiany grami! </b> </h1>
         
         </header>
         </div>
         </div>
-
-
-  
   </div>
-  <br> </br>
     <!-- Main content -->
     <section class="content"> 
      
@@ -256,22 +238,23 @@ $(document).ready(function() {
 <br> </br>
 
 
-<div class="container">
-            
-            <div class="column">    
-<div class="col-xs-1" align="center">
-
-  <h2><p class="text"><b> OFERTY PROMOWANE  </b></p></h2>
+<div class="container-xl">
+    <div class="column"> <!-- przez to że jest zamknięta w kolumnie, jest mniejsza datatabela -->
+         <div class="card">
+         <div class="card-header text-white" style="background-color: #00AA9E;">
+            <div class="col-lg">
+              <div align="center">
+    <h1 ><i class="fa fa-list"> </i> OFERTY PROMOWANE  </h1>
+    <p class="text">*Poniżej znajduję się tabela z ofertami  <b>PROMOWANYMI</b>. </p>
   </div>
-  <p class="text">*Poniżej znajduję się tabela z ofertami  <b>PROMOWANYMI</b>. </p>
   </div>
 </div>
 
-<div class="container">
+<div class="card-body">
 
 <form class="center" >
 <table class="table table-striped table-bordered text-center table-hover table-responsive-lg" id="promo"> 
-     <thead class="thead-dark">
+     <thead class="thead-dark" >
       <tr>
       <th>LP</th>
       <th>Zdjęcie</th>
@@ -291,7 +274,8 @@ $(document).ready(function() {
   @endforeach
     </table>
             
-           
+        </div>
+        </div>   
            
 
             

@@ -244,6 +244,7 @@ $(document).ready(function() {
                 <th>LP</th>
                 <th>Zdjęcie</th>
                 <th>Treść</th>
+                <th>Czat</th>
             </tr>
         </thead>
   
@@ -259,9 +260,9 @@ $(document).ready(function() {
         <button class="btn btn-secondary mb-2"><a href="{{ route('destroyoffer', $row->id) }}">Usuń</a></button>
         @endif
         </td>
-        <!-- <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
+       <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
         <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
-        </td> -->
+        </td> 
       </tr>
   @endforeach
     </table>
