@@ -57,12 +57,12 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <div class="d-grid gap-2 d-md-block">
-  <a class="btn btn-primary " href='home' role="button"><h6> <i class="fa fa-home"></i> Strona główna</h6> </a>
-  <a class="btn btn-info " href='list' role="button"><h6> <i class="fa fa-list"></i> Lista Ofert</h6> </a>
-  <a class="btn btn-success"  href='offer' role="button"><h6> <i class="fa fa-plus-circle"></i> Utwórz ofertę </h6></a>
-  <a class="btn btn-warning " href='mylist' role="button"><h6><i class="fa fa-archive"></i> Moja lista</h6></a>
-  <a class="btn btn-orange " href='liked' role="button"><h6><i class="fa fa-heart"></i> Polubione </h6></a>
-  <a class="btn btn-danger " href='archive' role="button"><h6><i class="fa fa-gavel"></i> Archiwum </h6></a>
+  <a class="btn btn-primary " href="{{ route('home') }}" role="button"><h6> <i class="fa fa-home"></i> Strona główna</h6> </a>
+  <a class="btn btn-info " href="{{ route('list') }}" role="button"><h6> <i class="fa fa-list"></i> Lista Ofert</h6> </a>
+  <a class="btn btn-success"  href="{{ route('offer') }}" role="button"><h6> <i class="fa fa-plus-circle"></i> Utwórz ofertę </h6></a>
+  <a class="btn btn-warning " href="{{ route('mylist') }}" role="button"><h6><i class="fa fa-archive"></i> Moja lista</h6></a>
+  <a class="btn btn-orange " href="{{ route('liked') }}" role="button"><h6><i class="fa fa-heart"></i> Polubione </h6></a>
+  <a class="btn btn-danger " href="{{ route('archive') }}" role="button"><h6><i class="fa fa-gavel"></i> Archiwum </h6></a>
 
   
 </div>
