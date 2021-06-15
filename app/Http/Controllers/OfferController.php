@@ -40,6 +40,7 @@ class OfferController extends Controller
 	$offer->itemTitle=$req->itemTitle;
 	$offer->description=$req->description;
 	$offer->id_user=$req->id_user;
+    $offer->autor=$req->autor;
     $offer->save();
 
     $images=new images;
@@ -48,4 +49,5 @@ class OfferController extends Controller
     $images->save();
 	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');
     }
+    
 }

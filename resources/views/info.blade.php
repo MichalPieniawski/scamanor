@@ -43,7 +43,8 @@
             <div class="form-group">
                     <label for="tresc">Informacje:</label>
                 </div>
-                <p class="card-text">  <b>1.</b> Oferta: <b>{{$oferty['itemTitle']}}</b>   &nbsp&nbsp&nbsp&nbsp   <b> 2.</b> Autor wpisu:<b> {{$oferty['autor']}} </b> &nbsp&nbsp&nbsp&nbsp  <b> 3.</b> Status:<b> <img src="data:image/jpeg;base64,{{$oferty['img_code']}}" width="150" height="175" alt="obrazekgry"> </b> </p> 
+                <p class="card-text">  <b>1.</b> Oferta: <b>{{$oferty['itemTitle']}}</b>   &nbsp&nbsp&nbsp&nbsp   <b> 2.</b> Autor wpisu:<b> {{$oferty['autor']}} </b> &nbsp&nbsp&nbsp&nbsp  
+                <!-- <b> 3.</b> zdjęcie:<b> <img src="data:image/jpeg;base64, {{$oferty['img_code']}}" width="150" height="175" alt="obrazekgry"> </b> </p>  -->
      
             
                 

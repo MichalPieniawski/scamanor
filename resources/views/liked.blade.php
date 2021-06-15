@@ -244,7 +244,6 @@ $(document).ready(function() {
                 <th>LP</th>
                 <th>Zdjęcie</th>
                 <th>Treść</th>
-                <th>Status</th>
             </tr>
         </thead>
   
@@ -253,8 +252,6 @@ $(document).ready(function() {
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-
       </tr>
     
       </table>

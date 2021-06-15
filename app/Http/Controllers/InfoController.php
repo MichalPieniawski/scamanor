@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\offer;
 use Illuminate\Http\Request;
 use App\Models\images;
+use App\Models\User;
 class InfoController extends Controller
 {
     /**

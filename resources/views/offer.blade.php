@@ -99,10 +99,10 @@
                     </div>
                 </div>
     
-
+                <input type="hidden" name="autor" id="autor" value="{{Auth::user()->name }}">
                 <div class="form-group"> <input type="hidden" id="id_user" name="id_user" value="{{Auth::user()->id }}">  </div>
                 <p align="right">    
-                <button type="submit" class="btn btn-success"  > <i class="fa fa-plus-circle"></i>  Dodaj wpis</button>
+                <button type="submit" class="btn btn-success"  > <i class="fa fa-plus-circle"></i> Utwórz ofertę</button>
                 </p>
                 <!-- End input fields -->
                 </form>
