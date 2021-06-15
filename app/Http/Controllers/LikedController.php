@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\offer;
+
 use Illuminate\Http\Request;
-use App\Models\images;
-class InfoController extends Controller
+
+class LikedController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,9 +21,8 @@ class InfoController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    function appearData($id)
+    public function index()
     {
-        $offers=offer::find($id);
-        return view('info',['oferty'=>$offers]);
+        return view('liked');
     }
 }

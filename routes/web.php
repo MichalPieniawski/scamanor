@@ -25,6 +25,8 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::get('/list', 'App\Http\Controllers\ListController@index')->name('list');
 Route::get('/offer', 'App\Http\Controllers\OfferController@index')->name('offer');
 Route::get('/statuslist', 'App\Http\Controllers\StatusListController@index')->name('statuslist');
+Route::get('/mylist', 'App\Http\Controllers\MyListController@index')->name('mylist');
+Route::get('/liked', 'App\Http\Controllers\LikedController@index')->name('liked');
 Route::get('/archive', 'App\Http\Controllers\ArchiveController@index')->name('archive');
 Route::get('info/{id}','App\Http\Controllers\InfoController@appearData')->name('info/{id}');
 Route::get('/chat', 'App\Http\Controllers\ChatController@index')->name('chat');

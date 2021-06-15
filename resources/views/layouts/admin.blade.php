@@ -39,6 +39,12 @@
 <link rel = "icon" href = "./img/smoktrans.png"  type = "image/x-icon">
 </head>
 
+<style>
+.btn-orange{
+  background-color:pink;
+}
+</style>
+
 <body class="hold-transition sidebar-mini sidebar-collapse">
 <div class="wrapper" class="toggled">
 
@@ -54,7 +60,8 @@
   <a class="btn btn-primary " href='home' role="button"><h6> <i class="fa fa-home"></i> Strona główna</h6> </a>
   <a class="btn btn-info " href='list' role="button"><h6> <i class="fa fa-list"></i> Lista Ofert</h6> </a>
   <a class="btn btn-success"  href='offer' role="button"><h6> <i class="fa fa-plus-circle"></i> Utwórz ofertę </h6></a>
-  <a class="btn btn-warning " href='statuslist' role="button"><h6><i class="fa fa-handshake-o"></i> Status wymian</h6></a>
+  <a class="btn btn-warning " href='mylist' role="button"><h6><i class="fa fa-archive"></i> Moja lista</h6></a>
+  <a class="btn btn-orange " href='liked' role="button"><h6><i class="fa fa-heart"></i> Polubione </h6></a>
   <a class="btn btn-danger " href='archive' role="button"><h6><i class="fa fa-gavel"></i> Archiwum </h6></a>
 
   
