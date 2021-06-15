@@ -276,7 +276,6 @@ $(document).ready(function() {
       <th>LP</th>
       <th>Zdjęcie</th>
       <th>Treść</th>
-     
       </tr>
       </thead>
  <tbody>

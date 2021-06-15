@@ -1,5 +1,6 @@
 @extends('layouts.admin')
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
+  <script src="{{ asset('js/app.js') }}" defer></script>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

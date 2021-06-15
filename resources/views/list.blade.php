@@ -214,7 +214,12 @@ $(document).ready(function() {
     
 } );
 </script>
-
+<style>
+c
+{text-decoration: none;
+ background-color: none;
+ color:black; }
+ </style>
 <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -274,7 +279,7 @@ $(document).ready(function() {
       <th>LP</th>
       <th>Zdjęcie</th>
       <th>Treść</th>
-     
+      <th>Czat</th>
       </tr>
       </thead>
  <tbody>
@@ -291,7 +296,7 @@ $(document).ready(function() {
         @endif
         </td>
         <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
-        <button class="btn btn-secondary mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
+        <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
         </td>
       </tr>
   @endforeach

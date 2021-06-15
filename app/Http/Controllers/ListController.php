@@ -29,7 +29,8 @@ class ListController extends Controller
     {
         $offers = DB::table('offers')
         ->join('images', 'offers.id', '=', 'id_offer')
-        ->select('offers.*', 'img_code')
+        ->select('offers.*', 'img_code' )
+        
         ->get();
         return view('list', ['oferty' => $offers]);
     }
