@@ -36,7 +36,7 @@
 <!-- Page level plugin JavaScript--><script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 
 <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-<link rel = "icon" href = "./img/smoktrans.png"  type = "image/x-icon">
+<link rel = "icon" href ="{{URL::asset('/img/smoktrans.png')}}"  type = "image/x-icon">
 </head>
 
 <style>
@@ -92,7 +92,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="home" class="brand-link">
-    {!! "&nbsp;" !!} {!! "&nbsp;" !!}  <img src="./img/smoktrans.png" width="25px" height="25px"></i>
+    {!! "&nbsp;" !!} {!! "&nbsp;" !!}  <img src="{{URL::asset('/img/smoktrans.png')}}" width="25px" height="25px"></i>
       <span class="brand-text font-weight-light">Panel Scamanor</span>
     </a>
 
@@ -101,7 +101,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-      <img src="./img/profile.png" class="img-circle elevation-2" alt="User Image">
+      <img src="{{URL::asset('/img/profile.png')}}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
       <a href='profile' class="d-block">
