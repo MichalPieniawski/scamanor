@@ -97,27 +97,37 @@
               </div>
               
               <div class="card">
-              <div class="card-header">
-              <h3> Zmiana nazwy użytkownika </h3>
-              </div>
-              <div class="card-body">
+            <form class="form-example" action="/changenick" method="POST">
+            @csrf
+            <div class="card-header">
+            <h3>Zmiana nazwy użytkownika</h3>
+            </div>
+            <div class="card-body">
             <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Aktualna nazwa</label>
+            <input type="hidden" name="id" id="id" value="{{Auth::user()->id}}">
+                            <label for="nickname" class="col-md-4 col-form-label text-md-right">Aktualna nazwa</label>
   
                             <div class="col-md-6">
-                                <input id="name"  class="form-control" name="name" value="{{Auth::user()->name }}" disabled>
+                                <input id="name" class="form-control" name="name" value="  {{Auth::user()->name }}" disabled>
                             </div>
                         </div>
+  
                         <div class="form-group row">
-                        <label for="new_name" class="col-md-4 col-form-label text-md-right">Nowa nazwa</label>  
-                         <div class="col-md-6">
-                        <input id="new_name"  class="form-control" name="new_name" autocomplete="current-password">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Nowa nazwa</label>
+  
+                            <div class="col-md-6">
+                                <input id="name"  class="form-control" name="name">
                             </div>
                         </div>
-
-
-                </div>
-
+                  
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Zmień nazwę
+                                </button>
+                            </div>
+                        </div>
+                    </form>
 
             </div>
             <!-- /.card -->

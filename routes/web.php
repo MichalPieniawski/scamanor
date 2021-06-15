@@ -37,6 +37,8 @@ Route::post('/offersubmit','App\Http\Controllers\OfferController@save');
 /* route profilu + zmiana hasła */
 Route::get('/profile', 'App\Http\Controllers\ProfileController@index');
 Route::post('/changepassd', 'App\Http\Controllers\ProfileController@store');
+Route::post('/changenick', 'App\Http\Controllers\ProfileController@nick');
+
 
 Route::get('/list/{id}','App\Http\Controllers\ListController@destroy')->name('destroyoffer')->middleware(['auth', 'admin']);
 Route::get('/list/{id}','App\Http\Controllers\ListController@chatstart')->name('chatstart');

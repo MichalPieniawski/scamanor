@@ -66,18 +66,22 @@
                 </div>
             @endif
     
-
-   <div class="container">
+  </ul>
+            <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-10 col-md-8 col-lg-6">
+        <div class="card">
             <!-- Form -->
-    </ul>
+  
 
             <form enctype="multipart/form-data" action="/offersubmit" method="POST" accept-charset="utf-8">
             @csrf
+            <div class="card-header">
                 <h1>Tworzenie nowej oferty wymiany</h1>
                 <p class="description">Utwórz nową ofertę wymiany, uzupełniając formularz.</p>
                 <!-- Input fields -->
+                </div>
+                <div class="card-body">
                 <div class="form-group">
                     <label for="tresc">Tytuł gry:</label>
                     <input type="text" class="form-control" id="itemTitle" placeholder="Wprowadź tytuł gry, jaką chcesz wystawić do wymiany..." name="itemTitle">
@@ -97,8 +101,9 @@
     
 
                 <div class="form-group"> <input type="hidden" id="id_user" name="id_user" value="{{Auth::user()->id }}">  </div>
-             
+                <p align="right">    
                 <button type="submit" class="btn btn-success"  > <i class="fa fa-plus-circle"></i>  Dodaj wpis</button>
+                </p>
                 <!-- End input fields -->
                 </form>
                 </div>
@@ -107,9 +112,7 @@
         </div>
     </div>
 </div>
-              
-
-           
+      </div>     
            
 
             

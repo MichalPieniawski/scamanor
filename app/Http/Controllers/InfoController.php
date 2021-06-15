@@ -23,7 +23,7 @@ class InfoController extends Controller
      */
     function appearData($id)
     {
-        $offers=offers::find($id);
-        return view('info',['oferty'=>$offers, 'notatki'=>$Notatki]);
+        $offers=offer::find($id);
+        return view('info',['oferty'=>$offers]);
     }
 }

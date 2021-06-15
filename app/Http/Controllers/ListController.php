@@ -30,8 +30,11 @@ class ListController extends Controller
         $offers = DB::table('offers')
         ->join('images', 'offers.id', '=', 'id_offer')
         ->select('offers.*', 'img_code' )
-        
         ->get();
+        $offers->transform(function($i){
+        return (array)$i;
+        });
+        $array = $offers->toArray();
         return view('list', ['oferty' => $offers]);
     }
     public function destroy($id)
