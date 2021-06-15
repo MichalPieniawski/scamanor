@@ -30,6 +30,7 @@ Route::get('/liked', 'App\Http\Controllers\LikedController@index')->name('liked'
 Route::get('/archive', 'App\Http\Controllers\ArchiveController@index')->name('archive');
 Route::get('info/{id}','App\Http\Controllers\InfoController@appearData')->name('info/{id}');
 Route::get('/chat', 'App\Http\Controllers\ChatController@index')->name('chat');
+Route::get('/chat/{id}','App\Http\Controllers\ChatController@chooseuser')->name('chooseuser');
 
 /* route dodania oferty */
 Route::post('/offersubmit','App\Http\Controllers\OfferController@save');
@@ -43,7 +44,7 @@ Route::post('/changenick', 'App\Http\Controllers\ProfileController@nick');
 
 
 Route::get('/list/{id}','App\Http\Controllers\ListController@destroy')->name('destroyoffer')->middleware(['auth', 'admin']);
-Route::get('/list/{id}','App\Http\Controllers\ListController@chatstart')->name('chatstart');
+
 
 Route::get('/contacts', 'App\Http\Controllers\ContactsController@get');
 Route::get('/conversation/{id}', 'App\Http\Controllers\ContactsController@getMessagesFor');

@@ -13,11 +13,14 @@
             user: {
                 type: Object,
                 required: true
+            },
+            testid: {
+                type: Object
             }
         },
         data() {
             return {
-                selectedContact: null,
+                selectedContact: this.testid[0],
                 messages: [],
                 contacts: []
             };
@@ -29,8 +32,15 @@
                 });
             axios.get('/contacts')
                 .then((response) => {
+                    console.log(this.testid)
+                    console.log(this.user)
                     this.contacts = response.data;
                 });
+            axios.get(`/conversation/${this.selectedContact.id}`)
+                    .then((response) => {
+                        this.messages = response.data;
+            })
+                
         },
         methods: {
             startConversationWith(contact) {

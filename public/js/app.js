@@ -1971,11 +1971,14 @@ __webpack_require__.r(__webpack_exports__);
     user: {
       type: Object,
       required: true
+    },
+    testid: {
+      type: Object
     }
   },
   data: function data() {
     return {
-      selectedContact: null,
+      selectedContact: this.testid[0],
       messages: [],
       contacts: []
     };
@@ -1987,7 +1990,12 @@ __webpack_require__.r(__webpack_exports__);
       _this.hanleIncoming(e.message);
     });
     axios.get('/contacts').then(function (response) {
+      console.log(_this.testid);
+      console.log(_this.user);
       _this.contacts = response.data;
+    });
+    axios.get("/conversation/".concat(this.selectedContact.id)).then(function (response) {
+      _this.messages = response.data;
     });
   },
   methods: {
@@ -57304,7 +57312,7 @@ window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/d
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "a52d729b0e5cd11abb90",
-  cluster: "mt1",
+  cluster: "eu",
   encrypted: true
 });
 

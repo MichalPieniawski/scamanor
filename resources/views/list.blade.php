@@ -281,14 +281,14 @@ c
       <tr>
         <td style="height:50px;width:50px"></td>
         <td style="height:180px;width:180px"><img src="data:image/jpeg;base64,{{$row['img_code']}}" width="150" height="175" alt="obrazekgry"></td>
-        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><a href={{"info/".$row['id']}}><h5><b>{{$row['itemTitle']}}</b></h5></td>
+        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><a href="{{'info/'.$row['id']}}"><h5><b>{{$row['itemTitle']}}</b></h5></td>
         @if(Auth::user()->is_admin)
          <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
-        <button class="btn btn-secondary mb-2"><a href="{{ route('destroyoffer', $row->id) }}">Usuń</a></button>
+        <button class="btn btn-secondary mb-2"><a href="{{ route('destroyoffer', $row['id']) }}">Usuń</a></button>
         @endif
         </td>
         <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
-        <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
+        <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chooseuser', $row['id_user']) }}">Chat</a></button>
         </td>
       </tr>
   @endforeach

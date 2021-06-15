@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 <meta name="csrf-token" content="{{ csrf_token() }}">
-  <script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -9,7 +9,7 @@
                 <div class="card-header">Scamanor Messenger</div>
 
                 <div class="card-body" id="app">
-                    <chat-app :user="{{ auth()->user() }}"></chat-app>
+                <chat-app :user="{{ auth()->user() }}" :testid="{{ $testid }}"></chat-app>
                 </div>
             </div>
         </div>
