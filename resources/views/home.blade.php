@@ -259,6 +259,7 @@ $(document).ready(function() {
       <th>LP</th>
       <th>Zdjęcie</th>
       <th>Treść</th>
+      <th>Polub</th>
       </tr>
       </thead>
  <tbody>
@@ -267,9 +268,10 @@ $(document).ready(function() {
    </div>  
       <tr>
         <td style="height:50px;width:50px"></td>
-        <td style="height:180px;width:180px"><img src="data:image/jpeg;base64,{{$row -> img_code}}" width="150" height="175" alt="obrazekgry"></td>
-        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><h5><b>{{$row -> itemTitle }}</b></h5></td>
- 
+        <td style="height:180px;width:180px"><img src="data:image/jpeg;base64,{{$row['img_code']}}" width="150" height="175" alt="obrazekgry"></td>
+        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><a href="{{'info/'.$row['id']}}"><h5><b>{{$row['itemTitle']}}</b></h5></td>
+        </td>
+        <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;"><a href={{"Like/".$row['id']}} class="btn btn-default mb-2"><i class="fa fa-heart">Polub</a></td>
       </tr>
   @endforeach
     </table>

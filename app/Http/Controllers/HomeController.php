@@ -29,6 +29,10 @@ class HomeController extends Controller
         ->select('offers.*', 'img_code')
         ->where('promoted', '=', '1')
         ->get();
-        return view('home', ['ofertyprom' => $offers]);
+        $offers->transform(function($i){
+            return (array)$i;
+            });
+            $array = $offers->toArray();
+            return view('home', ['ofertyprom' => $offers]);
     }
 }
