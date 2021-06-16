@@ -14,7 +14,6 @@ class AddLikedToOffersTable extends Migration
     public function up()
     {
         Schema::table('offers', function (Blueprint $table) {
-            $table->boolean('liked')->nullable();
             $table->string('finisher')->nullable();
         });
     }
