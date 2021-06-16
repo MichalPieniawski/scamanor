@@ -235,7 +235,7 @@ $(document).ready(function() {
 <form class="center" >
   <div class="form-group mb-2" align="center">
     <h1><i class="fa fa-archive"> </i> <b> Moja lista</b></h1>
-    <p> Tabela zawiera podjętę przez Ciebie wymiany. </p>
+    <p> Tabela zawiera wystawione przez Ciebie oferty. </p>
   </div>
 </form>
 <table id="example" class="table table-striped table-bordered text-center table-hover table-responsive-lg">

@@ -35,7 +35,9 @@ Route::get('/chat/{id}','App\Http\Controllers\ChatController@chooseuser')->name(
 /* route dodania oferty */
 Route::post('/offersubmit','App\Http\Controllers\OfferController@save');
 
+Route::get('Like/{id}','App\Http\Controllers\ListController@Like');
 
+Route::get('Like2/{id}','App\Http\Controllers\InfoController@Like')->name('info/{id}');
 
 /* route profilu + zmiana hasła */
 Route::get('/profile', 'App\Http\Controllers\ProfileController@index');

@@ -235,26 +235,37 @@ $(document).ready(function() {
 <form class="center" >
   <div class="form-group mb-2" align="center">
     <h1><i class="fa fa-archive"> </i> <b> Lista Twoich zainteresowań</b></h1>
-    <p> Tabela zawiera podjętę przez Ciebie wymiany. </p>
+    <p> Tabela zawiera polubione przez Ciebie oferty. </p>
   </div>
 </form>
 <table id="example" class="table table-striped table-bordered text-center table-hover table-responsive-lg">
         <thead class="thead-dark">
-            <tr >
+            <tr>
                 <th>LP</th>
                 <th>Zdjęcie</th>
                 <th>Treść</th>
+                <th>Czat</th>
             </tr>
         </thead>
   
    </div>  
+   @foreach($oferty as $row)
+   </div>  
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td style="height:50px;width:50px"></td>
+        <td style="height:180px;width:180px"><img src="data:image/jpeg;base64,{{$row['img_code']}}" width="150" height="175" alt="obrazekgry"></td>
+        <td class="cell-breakWord" style="text-align: center; vertical-align: middle;"><a href={{"info/".$row['id']}}><h5><b>{{$row['itemTitle']}}</b></h5></td>
+        @if(Auth::user()->is_admin)
+         <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
+        <button class="btn btn-secondary mb-2"><a href="{{ route('destroyoffer', $row->id) }}">Usuń</a></button>
+        @endif
+        </td>
+       <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
+        <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chat') }}">Chat</a></button>
+        </td> 
       </tr>
-    
-      </table>
+  @endforeach
+    </table>
 
 </div>
 

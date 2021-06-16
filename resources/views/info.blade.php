@@ -64,7 +64,6 @@
      
             </p> 
             <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chooseuser', $oferty['id_user']) }}">Chat</a></button>
-                
                     <div>
                     </div>
                     <br>

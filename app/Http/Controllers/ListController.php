@@ -55,4 +55,12 @@ class ListController extends Controller
         return redirect('/chat');
     }
 
+    function Like($id)
+    {  
+        $user_name=Auth::user()->name;
+        $offer=offer::find($id);
+        $offer=offer::where('id', $id)->update(array('liked'=> "1"));
+        $offer=offer::where('id', $id)->update(array('wholiked'=> $user_name));
+        return redirect('/list');
+    }
 }

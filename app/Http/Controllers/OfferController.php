@@ -49,5 +49,14 @@ class OfferController extends Controller
     $images->save();
 	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');
     }
+
+    function Like($id_usterki)
+    {  
+         $user_name=Auth::user()->name;
+        $usterkimodel=usterkimodel::find($id_usterki);
+        $usterki=usterkimodel::where('id_usterki', $id_usterki)->update(array('status'=> "Wykonane"));
+        $usterki=usterkimodel::where('id_usterki', $id_usterki)->update(array('finisher'=> $user_name));
+        return redirect('/report');
+    }
     
 }

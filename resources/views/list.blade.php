@@ -272,6 +272,7 @@ c
       <th>Zdjęcie</th>
       <th>Treść</th>
       <th>Czat</th>
+      <th>Polub ofertę</th>
       </tr>
       </thead>
  <tbody>
@@ -290,6 +291,7 @@ c
         <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;">
         <button class="btn btn-default mb-2"><a target="_blank" href="{{ route('chooseuser', $row['id_user']) }}">Chat</a></button>
         </td>
+        <td class="cell-breakWord" style="height:50px;width:50px;text-align: center; vertical-align: middle;"><a href={{"Like/".$row['id']}} class="btn btn-default mb-2"><i class="fa fa-heart">Polub</a></td>
       </tr>
   @endforeach
     </table>
