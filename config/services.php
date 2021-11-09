@@ -13,6 +13,9 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+    'pushover' => [
+        'token' => 'u2yw9yzfq89rc4zsq6yjnm9bewfwdu',
+    ],
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),

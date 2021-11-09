@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\offer;
 use App\Models\images;
 use Illuminate\Http\Request;
-
+use NotificationChannels\Pushover\PushoverChannel;
+use NotificationChannels\Pushover\PushoverMessage;
+use Illuminate\Notifications\Notification;
 use DB;
 
 class OfferController extends Controller
@@ -48,15 +50,19 @@ class OfferController extends Controller
     $images->id_offer=$offer->id;
     $images->save();
 	return redirect('/offer')->with('success', 'Pomyślnie utworzono nową ofertę wymiany!');
+    }    
+    
+    public function via($notifiable)
+    {
+        return [PushoverChannel::class];
     }
 
-    function Like($id_usterki)
-    {  
-         $user_name=Auth::user()->name;
-        $usterkimodel=usterkimodel::find($id_usterki);
-        $usterki=usterkimodel::where('id_usterki', $id_usterki)->update(array('status'=> "Wykonane"));
-        $usterki=usterkimodel::where('id_usterki', $id_usterki)->update(array('finisher'=> $user_name));
-        return redirect('/report');
+    public function toPushover($notifiable)
+    {
+        return PushoverMessage::create('The invoice has been paid.')
+            ->title('Invoice paid')
+            ->sound('incoming')
+            ->lowPriority()
+            ->url('http://scamanor/offer', 'Go to your invoices');
     }
-    
 }
